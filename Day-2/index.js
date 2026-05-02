@@ -128,3 +128,9 @@ console.log(tally);
 // function a(b, c) {
 //     return b(a(1, 2), c);
 // }
+
+
+// arr -> 1, 3, 4, 5, 6
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+console.log(months.splice(2, 3, 'Aaryan')); // Removes "February" and "March"
+console.log(months);
