@@ -159,3 +159,10 @@ Remove from beginning
 arr.shift();
 
 
+31 : Reduce Function
+processes an array and returns a single accumulated result
+arr.reduce((acc,curr) =>{ //operation},acc)
+
+
+32 : DOM Manipulation
+Worked on Login-Form designing, Navigating to other pages using [window.location.href = "page_name"]; 
