@@ -64,3 +64,27 @@ Second .then() - converts response to JSON (res.json())
 Next .then() - processes data
 Final .then() - produces output
 .catch() - handles errors
+
+API Used in Api Practice :
+----------------------------
+
+1. Dog Facts API
+Returns random dog facts and extracts useful information from nested JSON data.
+2. Cat Facts API
+Fetches multiple cat facts using query parameters like count.
+3.Emoji API
+Provides a random emoji along with its name, category, and symbol.
+4. Currency API
+Returns real-time currency exchange rates based on a base currency (e.g., EUR).
+5. Portfolio Optimizer API
+Calculates optimal asset weights using a POST request with covariance matrix input.
+6. Foodish API
+Fetches random food images from a specific category like biryani.
+7. Disney API
+Returns a list of Disney characters and allows extraction of specific fields like names.
+8. Countries API
+Provides detailed country information such as name, capital, and other attributes.
+9. Radio Browser API
+Fetches a list of radio stations and allows filtering or slicing required data.
+10. IMDb Movie API
+Searches movies by query and returns titles using special JSON keys.
