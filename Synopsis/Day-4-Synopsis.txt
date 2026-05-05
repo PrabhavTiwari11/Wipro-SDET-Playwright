@@ -32,3 +32,23 @@ Common Async Methods : 1.  setTimeout : Runs a function once after a delay. It d
                                         -Auto-refresh data
                                         -Polling APIs
                        3.  Promises : A Promise is used to handle asynchronous operations and represents a value that may be available now, later, or never
+
+
+
+
+
+
+fetch() : built-in JavaScript function used to make HTTP requests (get data from APIs)
+
+Promise Chaining : Promise chaining is a pattern where you attach multiple .then() calls to a Promise so that the output of one step becomes the input of the next.Promise chaining means executing asynchronous tasks in sequence, passing results from one .then() to the next.
+eg : Promise.resolve(5)
+  .then(num => num * 2)
+  .then(num => num + 3)
+  .then(result => console.log(result));
+
+
+How It Works : Each .then():
+
+-Receives result from previous step
+-Returns a new value (or Promise)
+-Passes it to next .then()
