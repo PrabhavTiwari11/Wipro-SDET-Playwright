@@ -31,7 +31,7 @@ Common Async Methods : 1.  setTimeout : Runs a function once after a delay. It d
                                         -Clock updates ⏰
                                         -Auto-refresh data
                                         -Polling APIs
-                       3.  Promises : A Promise is used to handle asynchronous operations and represents a value that may be available now, later, or never
+                       3.  Promises(asyn/await) : A Promise is used to handle asynchronous operations and represents a value that may be available now, later, or never
 
 
 
@@ -52,3 +52,15 @@ How It Works : Each .then():
 -Receives result from previous step
 -Returns a new value (or Promise)
 -Passes it to next .then()
+
+Fetch API : Used to make HTTP requests (GET / POST) and Returns a Promise.
+Promise Chaining : Using multiple .then() in sequence , Each step uses the result from the previous step , Final result is obtained in the last .then()
+
+How it works :
+
+fetch() - sends request to API
+First .then() - receives response
+Second .then() - converts response to JSON (res.json())
+Next .then() - processes data
+Final .then() - produces output
+.catch() - handles errors
