@@ -1,16 +1,10 @@
 //----1.-------------------------------------------------------------------------------------------------------------------------------------------
-// async function getDogFacts() {
-//   try {
-//     const res = await fetch("https://dogapi.dog/api/v2/facts");
-//     const data = await res.json();
-
-//     const facts = data.data.map(d => d.attributes.body);
-//     console.log(facts);
-
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
+// fetch("https://dogapi.dog/api/v2/facts")
+//   .then(res => res.json())
+//   .then(data => data.data)
+//   .then(list => list.map(d => d.attributes.body))
+//   .then(facts => console.log(facts))
+//   .catch(err => console.error(err));
 
 // getDogFacts();
 
@@ -28,25 +22,10 @@
 //-----2.-----------------------------------------------------------------------------------------------------------------------------------
 
 
-// async function getCatFacts() {
-//   try {
-//     const res = await fetch("https://meowfacts.herokuapp.com/?count=2");
-    
-//     if (!res.ok) {
-//       throw new Error(`HTTP error: ${res.status}`);
-//     }
-
-//     const data = await res.json();
-
-//     console.log(data); // pura response
-
-//   } catch (err) {
-//     console.error("Error:", err.message);
-//   }
-// }
-
-// getCatFacts();
-
+// fetch("https://meowfacts.herokuapp.com/?count=2")
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//   .catch(err => console.error(err));
 // Output : 
 
 // {
@@ -61,26 +40,14 @@
 
 
 
-// async function getRandomEmoji() {
-//   try {
-//     const res = await fetch("https://emojihub.yurace.pro/api/random");
-
-//     if (!res.ok) {
-//       throw new Error(`HTTP error: ${res.status}`);
-//     }
-
-//     const data = await res.json();
-
+// fetch("https://emojihub.yurace.pro/api/random")
+//   .then(res => res.json())
+//   .then(data => {
 //     console.log("Emoji:", data.name);
 //     console.log("Category:", data.category);
 //     console.log("Symbol:", data.htmlCode[0]);
-
-//   } catch (err) {
-//     console.error("Error:", err.message);
-//   }
-// }
-
-// getRandomEmoji();
+//   })
+//   .catch(err => console.error(err));
 
 // Output : 
 
@@ -93,24 +60,10 @@
 
 
 
-// async function getCurrencyRates() {
-//   try {
-//     const res = await fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json");
-
-//     if (!res.ok) {
-//       throw new Error(`HTTP error: ${res.status}`);
-//     }
-
-//     const data = await res.json();
-
-//     console.log(data);
-
-//   } catch (err) {
-//     console.error("Error:", err.message);
-//   }
-// }
-
-// getCurrencyRates();
+// fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json")
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//   .catch(err => console.error(err));
 
 // Output :
 
@@ -157,20 +110,19 @@
 //---------6.----------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-// async function getBiryaniImage() {
-//   try {
-//     const res = await fetch("https://foodish-api.com/api/images/biryani");
-//     const data = await res.json();
-
+// fetch("https://foodish-api.com/api/images/biryani")
+//   .then(res => {
+//     if (!res.ok) {
+//       throw new Error(`HTTP error: ${res.status}`);
+//     }
+//     return res.json();
+//   })
+//   .then(data => {
 //     console.log("Biryani Image:", data.image);
-
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
-
-// getBiryaniImage();
+//   })
+//   .catch(err => {
+//     console.error("Error:", err);
+//   });
 
 // output : 
 
