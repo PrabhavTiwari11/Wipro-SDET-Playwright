@@ -252,12 +252,12 @@
 
 
 
-// fetch("https://imdb.iamidiotareyoutoo.com/search?q=spiderman")
-//   .then(res => res.json())
-//   .then(data => data.description)
-//   .then(list => list.map(m => m["#TITLE"]))
-//   .then(titles => console.log(titles))
-//   .catch(err => console.error("Error:", err));
+fetch("https://imdb.iamidiotareyoutoo.com/search?q=spiderman")
+  .then(res => res.json())
+  .then(data => data.description)
+  .then(list => list.map(m => m["#TITLE"]))
+  .then(titles => console.log(titles))
+  .catch(err => console.error("Error:", err));
 
 
 //   output :
