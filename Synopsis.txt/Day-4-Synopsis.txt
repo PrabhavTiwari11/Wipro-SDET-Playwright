@@ -1,0 +1,34 @@
+Promise in JavaScript : A Promise in JavaScript is an object that represents the result of an asynchronous operation
+                        e.g : You place an order → Pending
+                              Food delivered → Resolved
+                              Order cancelled → Rejected
+
+
+3 States of a Promise
+    Pending → initial state (waiting)
+    Resolved (Fulfilled) → success
+    Rejected → failure
+
+Syntax : 
+
+const promise = new Promise((resolve, reject) => {
+  // async work
+});
+
+- A Promise is a way to handle future results of async operations in a clean and structured way.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Synchronous Operations : one by one execution (line-by-line). Execution is blocking — next line won’t run until current line finishes.
+
+Asynchronous Operations : does NOT wait, runs in background . Tasks can run independently, without blocking the main flow.
+Common Async Methods : 1.  setTimeout : Runs a function once after a delay. It does not block execution (asynchronous). 
+                                    Use cases:
+                                        -Delay execution
+                                        -Show notifications after some time
+                                        -API retry after delay
+                       2.  setInterval : Runs a function repeatedly after a fixed interval. Keeps running forever until stopped.
+                                     Use cases:
+                                        -Clock updates ⏰
+                                        -Auto-refresh data
+                                        -Polling APIs
+                       3.  Promises : A Promise is used to handle asynchronous operations and represents a value that may be available now, later, or never
