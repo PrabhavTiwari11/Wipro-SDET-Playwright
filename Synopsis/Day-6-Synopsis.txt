@@ -22,3 +22,79 @@ Promise : Promise is used to handle delayed operations.
 
 JSON.stringify() : Used to convert final movie array into JSON string format.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Prototype Inheritance : Prototype inheritance means one object can use the properties and methods of another object through its prototype. In JavaScript, objects can inherit features without using classes directly. It helps in code reuse.
+e.g. : const animal = {
+  eat() {
+    console.log("Animal is eating");
+  }
+};
+
+const dog = Object.create(animal);
+dog.eat();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Callback Function : A callback function is a function passed as an argument to another function. It is executed later when needed.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+forEach Function : forEach() is an array method used to run a function for each element of an array. It does not return a new array. It is mostly used when we only want to perform an action like printing values.
+e.g : const names = ["Aman", "Riya", "Karan"];
+
+names.forEach(name => {
+  console.log(name);
+});
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Stack (LIFO) : Stack is a memory structure that follows LIFO, which means Last In First Out. The last item added is removed first
+e.g. :let stack = [];
+
+stack.push("A");
+stack.push("B");
+stack.pop();
+
+console.log(stack);
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Heap : Heap is a memory area used to store objects, arrays, and functions. Unlike stack, heap is used for dynamic memory allocation. When we create an object, it is stored in heap memory.
+e.g. : const user = {
+  name: "Prabhav",
+  age: 25
+};
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Allocation : Allocation means assigning memory space to variables, objects, or functions. When we create a variable or object, JavaScript allocates memory for it.
+e.g. : let age = 22;
+const student = { name: "Aman" };
+
+=>Here, memory is allocated for age and student
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Spread Operator : The spread operator ... is used to copy or expand arrays and objects. It helps in combining arrays, copying objects, and passing multiple values easily
+e.g. : const oldUser = { name: "Aman", age: 22 };
+
+const newUser = {
+  ...oldUser,
+  city: "Delhi"
+};
+
+console.log(newUser);
