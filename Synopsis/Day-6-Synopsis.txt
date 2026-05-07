@@ -1,0 +1,24 @@
+split() : split() is used to divide a string into parts based on a separator. like (:), (-)
+
+Number() : Number() is used to convert string data into numeric form.
+
+isNaN() : isNaN() checks whether a value is a valid number or not.
+
+map() : map() is used to transform each item of an array into a new format.
+
+filter() : filter() is used to select only required data from an array.
+
+sort() : sort() is used to arrange data in order.
+
+JSON.stringify() : JSON.stringify() converts JavaScript objects into JSON string format.
+                   It is used to return the final result as a valid JSON string.
+
+Callback Function : A callback function is a function passed as an argument to another function.
+                    Here, isEligible() is passed to applyPromo() to check discount eligibility.
+
+setTimeout() : setTimeout() runs code after a delay.
+
+Promise : Promise is used to handle delayed operations.
+
+JSON.stringify() : Used to convert final movie array into JSON string format.
+
