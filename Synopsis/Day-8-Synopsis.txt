@@ -1,0 +1,22 @@
+Closure Function : A Closure Function in JavaScript is a function that remembers and can access variables from its outer (parent) function even after the outer function has finished executing.
+                   Closures help in data privacy, maintaining state, and creating reusable functions. They are commonly used in counters, event handlers, callbacks, and function factories.
+
+
+e.g : 
+ 
+function outerFunction() {
+    let count = 0;
+
+    function innerFunction() {
+        count++;
+        console.log(count);
+    }
+
+    return innerFunction;
+}
+
+let counter = outerFunction();
+
+counter(); // 1
+counter(); // 2
+counter(); // 3
