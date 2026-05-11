@@ -1,0 +1,89 @@
+1. Default Parameter : Default Parameter in JavaScript allows us to assign a default value to a function parameter if no value or undefined is passed during the function call. It helps avoid undefined values and makes the function safer and cleaner.
+e.g. : 
+function greet(name = "Guest") {
+    console.log("Hello " + name);
+}
+
+greet(); // Hello Guest
+greet("Prabhav"); // Hello Prabhav
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Spread Operator (...) : The Spread Operator is used to expand elements of an array, object, or iterable into individual elements. It is useful for copying arrays, merging arrays, and cloning objects.
+
+e.g :
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+
+console.log(arr2); // [1, 2, 3, 4, 5]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Rest Operator (...) : The Rest Operator collects multiple elements and combines them into a single array or object. It is mainly used in function parameters and destructuring.
+
+e.g. : 
+
+const [first, ...rest] = [10, 20, 30, 40];
+
+console.log(first); // 10
+console.log(rest);  // [20, 30, 40]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4. Rest Parameter : Rest Parameter allows a function to accept an unlimited number of arguments and stores them in an array. It improves flexibility in function design.
+
+e.g. : 
+function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sum(10, 20, 30)); // 60
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Destructuring : Destructuring is a JavaScript feature used to extract values from arrays or objects and assign them to variables in a shorter and cleaner way. 
+
+e.g. : 
+const person = {
+    name: "Prabhav",
+    age: 22
+};
+
+const { name, age } = person;
+
+console.log(name); // Prabhav
+console.log(age);  // 22
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Position Based Extraction : Position Based Extraction is used in Array Destructuring where values are extracted based on their position (index) in the array.
+
+e.g. : 
+const colors = ["Red", "Blue", "Green"];
+
+const [first, second] = colors;
+
+console.log(first);  // Red
+console.log(second); // Blue
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+7. Key Based Extraction : Key Based Extraction is used in Object Destructuring where values are extracted using object property names (keys), not positions.
+
+e.g. : 
+const student = {
+    name: "Prabhav",
+    course: "CSE"
+};
+
+const { name, course } = student;
+
+console.log(name);   // Prabhav
+console.log(course); // CSE
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
