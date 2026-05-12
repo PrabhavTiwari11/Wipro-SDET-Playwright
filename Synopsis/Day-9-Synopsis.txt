@@ -87,3 +87,115 @@ console.log(name);   // Prabhav
 console.log(course); // CSE
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. Async API : Async API is used to handle operations that take time, such as fetching data from a server, without stopping the execution of the program. It works using async and await, making asynchronous code easier to read and manage than Promises. 
+
+e.g : 
+async function getData() {
+    let response = await fetch("https://api.example.com/data");
+    let data = await response.json();
+    console.log(data);
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9. TypeScript : TypeScript is a superset of JavaScript that adds static typing, interfaces, classes, and better error checking during development. It helps write safer and more maintainable code.
+
+e.g. :
+let username: string = "Prabhav";
+let age: number = 22;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+10. Merge Interface : Interface merging happens when multiple interfaces with the same name are declared. TypeScript automatically combines them into one single interface. 
+
+e.g. :
+interface User {
+    name: string;
+}
+
+interface User {
+    age: number;
+}
+
+const person: User = {
+    name: "Prabhav",
+    age: 22
+};
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+11. Declaration Merging : Declaration Merging is a feature in TypeScript where multiple declarations with the same name are merged into one definition. It commonly works with interfaces, namespaces, and enums.
+
+e.g. :
+interface Student {
+    name: string;
+}
+
+interface Student {
+    course: string;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12. Enums : Enums (Enumerations) are used to define a set of named constant values. They improve code readability and make values easier to manage.
+
+e.g. :
+enum Role {
+    Admin,
+    User,
+    Guest
+}
+
+let myRole: Role = Role.Admin;
+console.log(myRole); // 0
+
+
+13. Tuples : Tuples are a special type of array in TypeScript where the number of elements and their data types are fixed in a specific order. 
+
+e.g. :
+let user: [string, number] = ["Prabhav", 22];
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+14. Difference Between Array and Tuple : 
+
+Array	                                                            Tuple
+Stores multiple values of same type	                                Stores fixed values of different types
+Length can change	                                                Length is fixed
+Example: number[]	                                                Example: [string, number]
+
+e.g. :
+let arr: number[] = [10, 20, 30];
+let tuple: [string, number] = ["Age", 22];
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+15. Generics : Generics allow us to create reusable components that work with different data types without losing type safety. 
+
+e.g. :
+function identity<T>(value: T): T {
+    return value;
+}
+
+console.log(identity<string>("Hello"));
+console.log(identity<number>(100));
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16. Constraint Generics : Constraint Generics are used when we want to limit the type that a generic can accept using the extends keyword. This ensures only specific types are allowed.
+
+e.g. :
+function printLength<T extends { length: number }>(item: T): void {
+    console.log(item.length);
+}
+
+printLength("Hello");
+printLength([1, 2, 3]);
