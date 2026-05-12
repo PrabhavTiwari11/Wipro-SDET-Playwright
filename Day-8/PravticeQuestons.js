@@ -1136,3 +1136,296 @@ let highSalaryEmployees = employees.filter(employee => employee.salary > 35000);
 
 console.log("Employees with salary above 35000:", highSalaryEmployees);
 
+
+
+// Beginner Projects Solutions
+
+
+// 1. Student Grade Calculator
+
+let marks = 82;
+
+if (marks >= 90) {
+  console.log("Grade: A");
+} else if (marks >= 75) {
+  console.log("Grade: B");
+} else if (marks >= 60) {
+  console.log("Grade: C");
+} else if (marks >= 40) {
+  console.log("Grade: D");
+} else {
+  console.log("Fail");
+}
+
+
+
+// 2. ATM Withdrawal Simulator
+
+let balance = 5000;
+let withdrawAmount = 2000;
+
+if (withdrawAmount <= 0) {
+  console.log("Invalid amount");
+} else if (withdrawAmount > balance) {
+  console.log("Insufficient balance");
+} else {
+  balance = balance - withdrawAmount;
+  console.log("Withdrawal successful");
+  console.log("Remaining Balance:", balance);
+}
+
+
+// 3. To-Do List Using Arrays
+
+
+let todos = [];
+
+todos.push("Study JavaScript");
+todos.push("Practice coding");
+todos.push("Revise notes");
+
+console.log("All Tasks:", todos);
+
+todos.splice(1, 1);
+
+console.log("After Delete:", todos);
+
+
+// 4. Password Generator
+
+function generatePassword(length) {
+  let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$";
+  let password = "";
+
+  for (let i = 0; i < length; i++) {
+    let randomIndex = Math.floor(Math.random() * chars.length);
+    password += chars[randomIndex];
+  }
+
+  return password;
+}
+
+console.log(generatePassword(8));
+
+
+// 5. Quiz Application 
+
+let score = 0;
+
+let question1 = "javascript";
+let answer1 = "javascript";
+
+if (question1 === answer1) {
+  score++;
+}
+
+let question2 = "html";
+let answer2 = "css";
+
+if (question2 === answer2) {
+  score++;
+}
+
+console.log("Final Score:", score);
+
+
+// Logic Building Challenges
+
+
+// 1. Find Missing Number in Array
+
+let arr = [1, 2, 3, 5];
+let n = 5;
+
+let total = (n * (n + 1)) / 2;
+let sum = arr.reduce((acc, curr) => acc + curr, 0);
+
+let missing = total - sum;
+
+console.log("Missing Number:", missing);
+
+
+// 2. Check Whether Two Strings Are Anagrams
+
+let str1 = "listen";
+let str2 = "silent";
+
+let sorted1 = str1.split("").sort().join("");
+let sorted2 = str2.split("").sort().join("");
+
+if (sorted1 === sorted2) {
+  console.log("Anagram");
+} else {
+  console.log("Not Anagram");
+}
+
+
+
+// 3. Rotate Array by K Positions
+
+let arr = [1, 2, 3, 4, 5];
+let k = 2;
+
+for (let i = 0; i < k; i++) {
+  let last = arr.pop();
+  arr.unshift(last);
+}
+
+console.log(arr);
+
+
+// 4. Find Duplicate Elements in Array
+
+
+let arr = [1, 2, 3, 2, 4, 5, 1];
+
+let duplicates = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr.indexOf(arr[i]) !== i) {
+    if (!duplicates.includes(arr[i])) {
+      duplicates.push(arr[i]);
+    }
+  }
+}
+
+console.log("Duplicates:", duplicates);
+
+
+// 5. Flatten Nested Arrays Manually
+
+let nested = [[1, 2], [3, 4], [5, 6]];
+let flat = [];
+
+for (let i = 0; i < nested.length; i++) {
+  for (let j = 0; j < nested[i].length; j++) {
+    flat.push(nested[i][j]);
+  }
+}
+
+console.log(flat);
+
+
+// Debugging Challenges
+
+
+// 1. Fix Infinite Loop Issue
+
+// Wrong Code:
+let i = 1;
+
+while (i <= 5) {
+  console.log(i);
+}
+
+// Problem: i is not increasing.
+
+// Correct Code:
+let i = 1;
+
+while (i <= 5) {
+  console.log(i);
+  i++;
+}
+
+
+
+// 2. Undefined Returned From Function
+
+// Wrong Code:
+
+function add(a, b) {
+  let sum = a + b;
+}
+
+console.log(add(10, 5));
+
+// Problem: function is not returning anything.
+
+// Correct Code:
+
+function add(a, b) {
+  let sum = a + b;
+  return sum;
+}
+
+console.log(add(10, 5));
+
+
+
+// 3. Debug Incorrect Array Sorting Behavior
+
+// Wrong Code:
+
+let numbers = [10, 5, 100, 25];
+
+numbers.sort();
+
+console.log(numbers);
+
+// Problem: It sort() numbers like string.
+
+// Correct Code:
+
+let numbers = [10, 5, 100, 25];
+
+numbers.sort((a, b) => a - b);
+
+console.log(numbers);
+
+
+
+// 4. Resolve Scope-Related Variable Issue
+
+// Wrong Code:
+
+if (true) {
+  let message = "Hello";
+}
+
+console.log(message);
+
+// Problem: let is a block scope , and can't be access out of Block.
+
+// Correct Code:
+
+let message;
+
+if (true) {
+  message = "Hello";
+}
+
+console.log(message);
+
+
+
+// 5. Fix Callback Execution Order Problem
+
+// Wrong Code:
+
+function getData(callback) {
+  setTimeout(() => {
+    console.log("Data received");
+  }, 2000);
+
+  callback();
+}
+
+getData(() => {
+  console.log("Callback executed");
+});
+
+// Problem: Callback is executing first which is not correct .
+
+// Correct Code:
+
+function getData(callback) {
+  setTimeout(() => {
+    console.log("Data received");
+    callback();
+  }, 2000);
+}
+
+getData(() => {
+  console.log("Callback executed");
+});
