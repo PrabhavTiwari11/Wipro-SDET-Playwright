@@ -1,0 +1,219 @@
+1. keyof : keyof is a TypeScript operator used to get all property names (keys) of an object type as a union of string literals. It helps in creating safer and dynamic property access.
+
+Example : 
+interface User {
+    name: string;
+    age: number;
+}
+
+type UserKeys = keyof User; // "name" | "age"
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. typeof : typeof in TypeScript is used to get the type of a variable or object. It helps reuse existing types without rewriting them manually.
+
+Example :
+
+const person = {
+    name: "Prabhav",
+    age: 22
+};
+
+type PersonType = typeof person;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+3. Partial : Partial<T> is a utility type that makes all properties of an interface optional. It is useful when updating only some values instead of the complete object.
+
+Example :
+
+interface User {
+    name: string;
+    age: number;
+}
+
+const updateUser: Partial<User> = {
+    age: 23
+};
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+4. Deep Partial : Deep Partial is a custom utility type where all nested object properties also become optional, not just the top-level properties.
+
+Example :
+
+type DeepPartial<T> = {
+    [P in keyof T]?: DeepPartial<T[P]>;
+};
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+5. as const : as const makes values readonly and keeps exact literal values instead of converting them into general types like string or number.
+
+Example:
+
+const role = {
+    type: "Admin"
+} as const;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+6. readonly : readonly is used to make object properties unchangeable after initialization. Once assigned, the value cannot be modified.
+
+Example:
+
+interface User {
+    readonly id: number;
+    name: string;
+}
+
+const user: User = {
+    id: 1,
+    name: "Prabhav"
+};
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+7. Readonly Array : ReadonlyArray<T> creates an array whose values cannot be modified using methods like push, pop, or assignment.
+
+Example:
+
+const numbers: ReadonlyArray<number> = [1, 2, 3];
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+8. Omit : Omit<T, K> creates a new type by removing specific properties from an existing type.
+
+Example:
+
+interface User {
+    name: string;
+    age: number;
+    password: string;
+}
+
+type SafeUser = Omit<User, "password">;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+9. in Operator : The in operator checks whether a property exists inside an object. It is also used for type narrowing in TypeScript.
+
+Example:
+
+if ("name" in person) {
+    console.log(person.name);
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+10. toUpperCase() : toUpperCase() is a string method used to convert all characters of a string into uppercase letters.
+
+Example:
+
+let name = "prabhav";
+console.log(name.toUpperCase()); // PRABHAV
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+11. toFixed() : toFixed() is a number method used to format a number to a fixed number of decimal places.
+
+Example:
+
+let price = 99.4567;
+console.log(price.toFixed(2)); // 99.46
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+12. Custom Type Guard using is Keyword : A custom type guard uses the is keyword to check and confirm the type of a variable at runtime.
+
+Example:
+
+function isString(value: any): value is string {
+    return typeof value === "string";
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+13. Types : Types in TypeScript define the kind of data a variable can store such as string, number, boolean, array, object, etc. They improve code safety and reduce runtime errors.
+
+Example:
+
+let username: string = "Prabhav";
+let age: number = 22;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+14. Type Narrowing : Type Narrowing is the process of reducing a variable’s possible types to a more specific type using conditions like typeof, instanceof, or in.
+
+Example:
+
+function print(value: string | number) {
+    if (typeof value === "string") {
+        console.log(value.toUpperCase());
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+15. Express
+
+Express.js is a fast and lightweight web framework for Node.js used to build APIs, web applications, and backend servers easily.
+
+Example:
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
+
+app.listen(3000);
