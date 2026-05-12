@@ -1,0 +1,22 @@
+{
+  "name": "wipro-sdet-playwright",
+  "version": "1.0.0",
+  "description": "This is an Express Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrabhavTiwari11/Wipro-SDET-Playwright.git"
+  },
+  "author": "Prabhav Tiwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrabhavTiwari11/Wipro-SDET-Playwright/issues"
+  },
+  "homepage": "https://github.com/PrabhavTiwari11/Wipro-SDET-Playwright#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
