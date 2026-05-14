@@ -1,0 +1,103 @@
+1. Playwright : Playwright is an end-to-end automation testing framework used for testing web applications. It supports multiple browsers like Chromium, Firefox, and WebKit using a single API. 
+                It is mainly used for UI testing, functional testing, and cross-browser testing. Playwright provides fast execution, auto-waiting, screenshots, video recording, tracing, and parallel execution features. 
+                It supports JavaScript, TypeScript, Python, Java, and C#.
+
+
+2. Two Principles in Testing: Expected and Actual : 
+
+Expected Result : Expected result means the output that should happen according to requirements or business logic.
+Example :
+If user enters correct username and password, login should be successful.
+
+Actual Result : Actual result means the real output produced by the system during execution.
+Example :
+After clicking login, the system redirects to dashboard successfully.
+
+=>  If both are same      → Test Pass
+    If both are different → Test Fail
+
+
+3. Boundary Value Analysis (BVA) : Boundary Value Analysis is a black-box testing technique used to test values at the boundary limits because most errors occur at boundary values.
+Example : If age field accepts values from 18 to 60
+
+Test cases should be:
+
+17 (just below minimum)
+18 (minimum boundary)
+19 (just above minimum)
+59 (just below maximum)
+60 (maximum boundary)
+61 (just above maximum)
+
+
+
+
+4. Selenium vs Playwright
+Feature                	               Selenium	                                    Playwright
+Browser Support	                       All major browsers	                        Chromium, Firefox, WebKit
+Speed	                               Slower	                                    Faster
+Auto Wait	                           Manual waits needed	                        Built-in auto wait
+Parallel Testing	                   Complex setup	                            Easy support
+
+=>  Selenium is older and widely used, while Playwright is modern, faster, and easier for advanced automation.
+
+
+
+5. How Playwright Works : Playwright directly communicates with browser engines using browser protocols instead of using WebDriver like Selenium.
+
+Working Process:
+Test script is written by tester
+Playwright launches browser instance
+It connects directly to browser engine
+Executes actions like click, fill, hover
+Waits automatically for elements
+Validates output using assertions
+Generates report, screenshot, trace, and video
+
+This direct communication makes Playwright faster and more stable.
+
+
+
+
+
+6. Drivers : Driver is a software component that helps automation tools communicate with browsers.
+
+Example:
+ChromeDriver → Google Chrome
+GeckoDriver → Mozilla Firefox
+EdgeDriver → Microsoft Edge
+
+In Selenium : Separate drivers are required manually.
+
+In Playwright : No separate driver setup is needed because Playwright manages browser binaries automatically. This reduces configuration problems.
+
+
+
+
+
+Locators : Locators are used to identify web elements on a webpage for performing actions like click, type, select, etc.
+
+Common Locators in Playwright -
+-id
+-class
+-text
+-CSS selector
+-XPath
+-role
+-placeholder
+-label
+
+Example :
+page.locator("#username")
+page.getByText("Login")
+page.getByRole("button", { name: "Submit" })
+
+
+
+
+8. Parallelism : Parallelism means executing multiple test cases at the same time instead of one after another.
+Benefits : 
+Faster execution
+Saves testing time
+Improves CI/CD speed
+Better resource utilization
