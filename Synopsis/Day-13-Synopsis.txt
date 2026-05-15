@@ -1,0 +1,57 @@
+1 ==>  Building Login page with express  & Automating it with Playwright
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2 ==>  How to start the server 
+-    JavaScript code
+app.listen(PORT, () => console.log(`App started on PORT:${PORT}`));
+
+-   .env file:
+PORT=3000
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3==> How to Run Playwright 
+
+node index.js
+npx playwright test
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4 ==>   How to do Playeright Testing
+
+-Created Playwright Project
+    - npm init playwright@latest
+
+
+-Installed Required Packages
+    - npm install express dotenv
+
+
+-Built a Simple Login Form for Testing
+
+
+-Created .env file 
+    PORT = 3000
+
+
+-Created Routes
+    app.get('/login')
+
+
+-Started Express Server
+    node index.js
+
+
+-Tested Multiple Cases
+    Valid Login
+    Invalid Login
+    Username Length Validation
+    Password Length Validation
